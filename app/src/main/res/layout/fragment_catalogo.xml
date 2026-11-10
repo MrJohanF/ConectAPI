@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C1b · Catalogo de productos con buscador, filtros y cuadricula -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Campo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margen"
+        android:hint="@string/buscar_apis"
+        app:startIconDrawable="@drawable/ic_buscar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/margen"
+        android:scrollbars="none">
+
+        <!-- Los chips de categorias se agregan por codigo -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupoCategorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true" />
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaApis"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="11dp"
+        android:paddingBottom="@dimen/margen"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+    <TextView
+        android:id="@+id/txtVacio"
+        style="@style/Texto.Suave"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/no_encontramos_apis_con_esa"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema base de la app (Comprador y pantallas de acceso): azul -->
+    <style name="Theme.ConectAPI" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorPrimaryContainer">@color/azul_claro</item>
+        <item name="colorOnPrimaryContainer">@color/azul_oscuro</item>
+        <item name="colorPrimaryDark">@color/azul_oscuro</item>
+        <item name="colorSecondary">@color/azul</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="colorSecondaryContainer">@color/azul_claro</item>
+        <item name="colorOnSecondaryContainer">@color/azul_oscuro</item>
+        <item name="colorTertiary">@color/morado</item>
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="colorSurfaceVariant">@color/fondo</item>
+        <item name="colorOnSurfaceVariant">@color/texto_suave</item>
+        <item name="colorSurfaceContainer">@color/superficie</item>
+        <item name="colorSurfaceContainerLow">@color/superficie</item>
+        <item name="colorSurfaceContainerHigh">@color/superficie</item>
+        <item name="colorSurfaceContainerHighest">@color/fondo</item>
+        <item name="colorOutline">@color/borde</item>
+        <item name="colorOutlineVariant">@color/borde</item>
+        <item name="colorError">@color/rojo</item>
+        <item name="android:statusBarColor">@color/superficie</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/superficie</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="estiloChipFiltro">@style/ChipFiltro</item>
+    </style>
+
+    <!-- Tema del Vendedor: solo cambia el color principal a verde -->
+    <style name="Theme.ConectAPI.Vendedor">
+        <item name="colorPrimary">@color/verde</item>
+        <item name="colorPrimaryContainer">@color/verde_claro</item>
+        <item name="colorOnPrimaryContainer">@color/verde_oscuro</item>
+        <item name="colorPrimaryDark">@color/verde_oscuro</item>
+        <item name="colorSecondary">@color/verde</item>
+        <item name="colorSecondaryContainer">@color/verde_claro</item>
+        <item name="colorOnSecondaryContainer">@color/verde_oscuro</item>
+    </style>
+
+    <!-- Tema del Administrador: color principal grafito -->
+    <style name="Theme.ConectAPI.Admin">
+        <item name="colorPrimary">@color/grafito</item>
+        <item name="colorPrimaryContainer">@color/grafito_claro</item>
+        <item name="colorOnPrimaryContainer">@color/grafito_oscuro</item>
+        <item name="colorPrimaryDark">@color/grafito_oscuro</item>
+        <item name="colorSecondary">@color/grafito</item>
+        <item name="colorSecondaryContainer">@color/grafito_claro</item>
+        <item name="colorOnSecondaryContainer">@color/grafito_oscuro</item>
+    </style>
+
+    <!-- Tema del splash: barra de estado azul para que se vea toda la pantalla igual -->
+    <style name="Theme.ConectAPI.Splash">
+        <item name="android:statusBarColor">@color/azul</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/azul_oscuro</item>
+        <item name="android:windowBackground">@drawable/bg_degradado_azul</item>
+    </style>
+</resources>

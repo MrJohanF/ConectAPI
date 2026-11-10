@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G4 · Ingreso con huella. FrameLayout para poner la hoja blanca pegada abajo -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_degradado_claro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_hoja"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            style="@style/Texto.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirma_que_eres_tu" />
+
+        <TextView
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/toca_el_lector_de_huella" />
+
+        <ImageButton
+            android:id="@+id/btnHuella"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_circulo_claro"
+            android:contentDescription="@string/usar_huella"
+            android:padding="26dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_huella"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/txtEstado"
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/la_huella_nunca_sale_de" />
+
+        <Button
+            android:id="@+id/btnUsarClave"
+            style="@style/Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usar_contrasena" />
+    </LinearLayout>
+</FrameLayout>

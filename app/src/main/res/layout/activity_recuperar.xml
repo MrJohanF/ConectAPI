@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G5 · Recuperar contrasena -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barra"
+        style="@style/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_atras"
+        app:title="@string/recuperar_contrasena" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_grande">
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="@dimen/margen_grande"
+            android:background="@drawable/bg_circulo_claro"
+            android:contentDescription="@string/icono_de_correo"
+            android:padding="24dp"
+            android:src="@drawable/ic_correo"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            style="@style/Texto.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/olvidaste_tu_contrasena" />
+
+        <TextView
+            style="@style/Texto.Suave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno"
+            android:gravity="center"
+            android:text="@string/escribe_el_correo_de_tu" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cajaCorreo"
+            style="@style/Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grande"
+            android:hint="@string/correo"
+            app:startIconDrawable="@drawable/ic_correo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            style="@style/Boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/enviar_enlace" />
+
+        <!-- Este aviso esta oculto y se muestra cuando se envia el enlace -->
+        <TextView
+            android:id="@+id/txtAviso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:background="@drawable/bg_aviso"
+            android:drawablePadding="10dp"
+            android:padding="@dimen/margen"
+            android:text="@string/listo_revisa_tu_correo_el"
+            android:textColor="@color/verde_oscuro"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_check"
+            app:drawableTint="@color/verde" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            style="@style/Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno"
+            android:text="@string/volver_a_iniciar_sesion" />
+    </LinearLayout>
+</LinearLayout>

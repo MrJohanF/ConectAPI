@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A3 · Crear, editar o eliminar un usuario -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barra"
+        style="@style/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_atras"
+        app:title="@string/nuevo_usuario" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_grande">
+
+            <TextView
+                android:id="@+id/txtIniciales"
+                android:layout_width="@dimen/avatar_grande"
+                android:layout_height="@dimen/avatar_grande"
+                android:background="@drawable/bg_circulo"
+                android:backgroundTint="@color/pizarra"
+                android:gravity="center"
+                android:text="@string/texto"
+                android:textColor="@color/blanco"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen"
+                android:hint="@string/nombre"
+                app:startIconDrawable="@drawable/ic_persona">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/correo"
+                app:startIconDrawable="@drawable/ic_correo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo.Lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rol">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/campoRol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    app:simpleItems="@array/roles" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo.Lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/estado">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/campoEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    app:simpleItems="@array/estados_usuario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtNota"
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_medio"
+                android:text="@string/al_nuevo_usuario_le_llega" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                style="@style/Boton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen"
+                android:text="@string/guardar_cambios" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                style="@style/Boton.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eliminar_usuario"
+                android:textColor="@color/rojo"
+                android:visibility="gone"
+                app:icon="@drawable/ic_borrar"
+                app:iconTint="@color/rojo" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

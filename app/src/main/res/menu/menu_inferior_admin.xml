@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_panel"
+        android:icon="@drawable/ic_grafica"
+        android:title="@string/panel" />
+    <item
+        android:id="@+id/nav_usuarios"
+        android:icon="@drawable/ic_usuarios"
+        android:title="@string/usuarios" />
+    <item
+        android:id="@+id/nav_productos"
+        android:icon="@drawable/ic_productos"
+        android:title="@string/productos" />
+    <item
+        android:id="@+id/nav_reportes"
+        android:icon="@drawable/ic_recibo"
+        android:title="@string/reportes" />
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@drawable/ic_persona"
+        android:title="@string/perfil" />
+</menu>

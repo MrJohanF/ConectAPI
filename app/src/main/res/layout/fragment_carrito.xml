@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C3 · Carrito de compras -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margen">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!-- Resumen de valores -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Texto.Suave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/subtotal" />
+
+                    <TextView
+                        android:id="@+id/txtSubtotal"
+                        style="@style/Texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        style="@style/Texto.Suave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/iva_19" />
+
+                    <TextView
+                        android:id="@+id/txtIva"
+                        style="@style/Texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/borde" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Texto.Subtitulo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/total" />
+
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        style="@style/Texto.Subtitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnVaciar"
+            style="@style/Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vaciar_carrito" />
+
+        <Button
+            android:id="@+id/btnPagar"
+            style="@style/Boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ir_a_pagar"
+            app:icon="@drawable/ic_candado"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+
+    <!-- Se muestra cuando el carrito no tiene productos -->
+    <LinearLayout
+        android:id="@+id/vacio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_grande"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_circulo_claro"
+            android:importantForAccessibility="no"
+            android:padding="26dp"
+            android:src="@drawable/ic_carrito"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            style="@style/Texto.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/tu_carrito_esta_vacio" />
+
+        <TextView
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/agrega_un_plan_desde_el" />
+
+        <Button
+            android:id="@+id/btnCatalogo"
+            style="@style/Boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/ver_catalogo" />
+    </LinearLayout>
+</FrameLayout>

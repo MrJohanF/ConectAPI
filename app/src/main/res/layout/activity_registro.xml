@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G3 · Crear cuenta -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barra"
+        style="@style/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_atras"
+        app:title="@string/crear_cuenta" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_grande">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre_completo"
+                app:startIconDrawable="@drawable/ic_persona">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/correo"
+                app:startIconDrawable="@drawable/ic_correo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/contrasena"
+                app:endIconMode="password_toggle"
+                app:helperText="@string/minimo_8_caracteres"
+                app:startIconDrawable="@drawable/ic_candado">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Texto.Etiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_grande"
+                android:text="@string/quiero_usar_conectapi_como" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/grupoRol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:checkedChip="@id/chipComprador"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipComprador"
+                    style="@style/ChipFiltro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comprador" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipVendedor"
+                    style="@style/ChipFiltro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendedor" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <CheckBox
+                android:id="@+id/checkTerminos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_pequeno"
+                android:text="@string/acepto_los_terminos_y_condiciones" />
+
+            <!-- Ley 1581 de 2012: la casilla viene sin marcar -->
+            <CheckBox
+                android:id="@+id/checkDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/autorizo_el_tratamiento_de_mis" />
+
+            <Button
+                android:id="@+id/btnCrear"
+                style="@style/Boton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen"
+                android:text="@string/crear_cuenta" />
+
+            <TextView
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_medio"
+                android:gravity="center"
+                android:text="@string/te_enviaremos_un_correo_para" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

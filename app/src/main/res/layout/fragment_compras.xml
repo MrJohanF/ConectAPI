@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C5 · Mis compras y llaves -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margen">
+
+    <TextView
+        android:id="@+id/txtAviso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_medio"
+        android:background="@drawable/bg_aviso"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:text="@string/pago_aprobado_factura_enviada_a"
+        android:textColor="@color/verde_oscuro"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_check"
+        app:drawableTint="@color/verde" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaCompras"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

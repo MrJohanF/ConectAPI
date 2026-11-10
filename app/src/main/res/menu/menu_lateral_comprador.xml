@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grupo_principal">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_inicio"
+            android:title="@string/inicio" />
+        <item
+            android:id="@+id/nav_catalogo"
+            android:icon="@drawable/ic_buscar"
+            android:title="@string/catalogo" />
+        <item
+            android:id="@+id/nav_carrito"
+            android:icon="@drawable/ic_carrito"
+            android:title="@string/carrito" />
+        <item
+            android:id="@+id/nav_compras"
+            android:icon="@drawable/ic_llave"
+            android:title="@string/compras" />
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_persona"
+            android:title="@string/perfil" />
+    </group>
+    <group android:id="@+id/grupo_cuenta">
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ic_escudo"
+            android:title="@string/ayuda_y_pqr" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_salir"
+            android:title="@string/cerrar_sesion" />
+    </group>
+</menu>

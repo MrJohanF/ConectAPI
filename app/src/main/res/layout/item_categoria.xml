@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margen_pequeno"
+    android:background="@drawable/bg_opcion"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margen"
+    android:paddingEnd="4dp">
+
+    <TextView
+        android:id="@+id/txtNombre"
+        style="@style/Texto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:id="@+id/btnEditar"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/editar"
+        android:src="@drawable/ic_editar"
+        app:tint="?attr/colorPrimary" />
+
+    <ImageButton
+        android:id="@+id/btnBorrar"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/eliminar"
+        android:src="@drawable/ic_borrar"
+        app:tint="@color/rojo" />
+</LinearLayout>

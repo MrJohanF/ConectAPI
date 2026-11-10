@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G1 · Bienvenida (splash). Se usa ConstraintLayout para centrar el logo y dejar la barra abajo -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_degradado_azul">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:background="@drawable/bg_logo_app"
+        android:contentDescription="@string/logo_de_conectapi"
+        android:padding="28dp"
+        android:src="@drawable/ic_llave_blanca"
+        app:layout_constraintBottom_toTopOf="@id/txtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_grande"
+        android:text="@string/app_name"
+        android:textColor="@color/blanco"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtLema"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtLema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_pequeno"
+        android:gravity="center"
+        android:text="@string/la_tienda_de_apis_para"
+        android:textColor="@color/blanco_suave"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNombre" />
+
+    <ProgressBar
+        android:id="@+id/barraCarga"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="140dp"
+        android:layout_height="6dp"
+        android:layout_marginBottom="@dimen/margen_medio"
+        android:max="100"
+        android:progressDrawable="@drawable/progreso_splash"
+        app:layout_constraintBottom_toTopOf="@id/txtRevisando"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRevisando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="@string/revisando_tu_sesion"
+        android:textColor="@color/blanco_suave"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

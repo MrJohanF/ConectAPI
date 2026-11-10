@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- V5 · Historial de pedidos recibidos -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margen">
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checkedChip="@id/chipOctubre"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipOctubre"
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/octubre" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/septiembre" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agosto" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaVentas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margen_pequeno"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margen"
+            android:stretchColumns="0">
+
+            <TableRow>
+                <TextView style="@style/Texto.Suave" android:text="@string/total_vendido" />
+                <TextView android:id="@+id/txtTotal" style="@style/Texto" />
+            </TableRow>
+
+            <TableRow android:paddingTop="4dp">
+                <TextView style="@style/Texto.Suave" android:text="@string/comision_de_la_tienda_15" />
+                <TextView android:id="@+id/txtComision" style="@style/Texto" android:textColor="@color/rojo" />
+            </TableRow>
+
+            <TableRow android:paddingTop="8dp">
+                <TextView style="@style/Texto.Subtitulo" android:text="@string/saldo_a_recibir" />
+                <TextView android:id="@+id/txtSaldo" style="@style/Texto.Subtitulo" android:textColor="?attr/colorPrimary" />
+            </TableRow>
+        </TableLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

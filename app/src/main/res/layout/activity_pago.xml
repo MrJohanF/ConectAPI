@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C4 · Pasarela de pagos -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barra"
+        style="@style/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_atras"
+        app:title="@string/pagar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_aviso"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:text="@string/pago_seguro_procesado_por_la"
+                android:textColor="@color/verde_oscuro"
+                app:drawableStartCompat="@drawable/ic_escudo"
+                app:drawableTint="@color/verde" />
+
+            <TextView
+                style="@style/Texto.Subtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen"
+                android:text="@string/metodo_de_pago" />
+
+            <RadioGroup
+                android:id="@+id/grupoMetodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/radioTarjeta">
+
+                <RadioButton
+                    android:id="@+id/radioTarjeta"
+                    style="@style/OpcionPerfil"
+                    android:text="@string/tarjeta_credito_debito" />
+
+                <RadioButton
+                    android:id="@+id/radioPse"
+                    style="@style/OpcionPerfil"
+                    android:text="@string/pse_cuenta_bancaria" />
+
+                <RadioButton
+                    android:id="@+id/radioNequi"
+                    style="@style/OpcionPerfil"
+                    android:text="@string/nequi" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/Texto.Suave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_pequeno"
+                android:text="@string/los_datos_de_la_tarjeta" />
+
+            <!-- Resumen antes de pagar (Ley 1480 de 2011) -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margen">
+
+                    <TextView
+                        style="@style/Texto.Etiqueta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resumen_de_la_compra" />
+
+                    <TextView
+                        android:id="@+id/txtProductos"
+                        style="@style/Texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtIva"
+                        style="@style/Texto.Suave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/borde" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/Texto.Subtitulo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/total_a_pagar" />
+
+                        <TextView
+                            android:id="@+id/txtTotal"
+                            style="@style/Texto.Subtitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <CheckBox
+                android:id="@+id/checkCondiciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_pequeno"
+                android:text="@string/lei_las_condiciones_de_compra" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/superficie"
+        android:orientation="vertical"
+        android:padding="@dimen/margen">
+
+        <ProgressBar
+            android:id="@+id/cargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnPagar"
+            style="@style/Boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde"
+            app:icon="@drawable/ic_candado"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

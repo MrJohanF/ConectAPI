@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grupo_principal">
+        <item
+            android:id="@+id/nav_panel"
+            android:icon="@drawable/ic_grafica"
+            android:title="@string/panel" />
+        <item
+            android:id="@+id/nav_usuarios"
+            android:icon="@drawable/ic_usuarios"
+            android:title="@string/usuarios" />
+        <item
+            android:id="@+id/nav_productos"
+            android:icon="@drawable/ic_productos"
+            android:title="@string/productos" />
+        <item
+            android:id="@+id/nav_reportes"
+            android:icon="@drawable/ic_recibo"
+            android:title="@string/reportes" />
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_persona"
+            android:title="@string/perfil" />
+        <item
+            android:id="@+id/nav_categorias"
+            android:icon="@drawable/ic_categoria"
+            android:title="@string/categorias" />
+    </group>
+    <group android:id="@+id/grupo_cuenta">
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ic_escudo"
+            android:title="@string/ayuda_y_pqr" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_salir"
+            android:title="@string/cerrar_sesion" />
+    </group>
+</menu>

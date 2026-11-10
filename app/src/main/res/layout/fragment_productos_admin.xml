@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A4 · Gestion de productos: revisar, aprobar, rechazar, pausar y eliminar APIs -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margen"
+    android:paddingTop="@dimen/margen_pequeno">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/grupoEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checkedChip="@id/chipRevisar"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipRevisar"
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/por_revisar" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAprobadas"
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aprobadas" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipOtras"
+            style="@style/ChipFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pausadas" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaProductos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/margen"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/txtVacio"
+        style="@style/Texto.Suave"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/no_hay_productos_en_este"
+        android:visibility="gone" />
+</LinearLayout>

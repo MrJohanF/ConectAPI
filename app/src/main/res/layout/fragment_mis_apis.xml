@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- V2 · Panel de productos del vendedor. CoordinatorLayout para poner el boton flotante -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaApis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/margen"
+        android:paddingBottom="96dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnNueva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/margen"
+        android:text="@string/nueva_api"
+        android:textColor="@color/blanco"
+        app:backgroundTint="?attr/colorPrimary"
+        app:icon="@drawable/ic_mas"
+        app:iconTint="@color/blanco" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

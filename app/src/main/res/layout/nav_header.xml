@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Encabezado del menu lateral: fondo del color del rol -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margen_grande"
+    android:paddingTop="48dp"
+    android:paddingBottom="@dimen/margen_grande">
+
+    <TextView
+        android:id="@+id/txtIniciales"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_logo_app"
+        android:gravity="center"
+        android:textColor="@color/blanco"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_medio"
+        android:textColor="@color/blanco"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blanco_suave"
+        android:textSize="13sp" />
+</LinearLayout>

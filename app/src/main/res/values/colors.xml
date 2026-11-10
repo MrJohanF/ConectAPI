@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color de cada rol -->
+    <color name="azul">#0A6CFF</color>
+    <color name="azul_oscuro">#0747B6</color>
+    <color name="azul_claro">#E3EEFF</color>
+    <color name="verde">#1E8E3E</color>
+    <color name="verde_oscuro">#14692C</color>
+    <color name="verde_claro">#E1F4E6</color>
+    <color name="grafito">#1F2328</color>
+    <color name="grafito_oscuro">#0E1013</color>
+    <color name="grafito_claro">#E6E8EB</color>
+
+    <!-- Colores generales -->
+    <color name="fondo">#F3F5FA</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="texto">#1A1C20</color>
+    <color name="texto_suave">#6B7280</color>
+    <color name="borde">#E1E5EC</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="blanco_suave">#CCFFFFFF</color>
+
+    <!-- Colores de estados y logos -->
+    <color name="naranja">#D97706</color>
+    <color name="naranja_claro">#FEF3C7</color>
+    <color name="rojo">#DC2626</color>
+    <color name="rojo_claro">#FEE2E2</color>
+    <color name="morado">#6366F1</color>
+    <color name="cian">#0EA5E9</color>
+    <color name="rosa">#EC4899</color>
+    <color name="ambar">#F59E0B</color>
+    <color name="pizarra">#64748B</color>
+    <color name="estrella">#F5A524</color>
+    <color name="consola">#111827</color>
+    <color name="consola_texto">#7DD3FC</color>
+</resources>

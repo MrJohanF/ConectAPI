@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permiso para usar la huella del celular -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ConectAPI">
+
+        <!-- ACCESO (todos los roles) -->
+        <activity
+            android:name=".acceso.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ConectAPI.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".acceso.LoginActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".acceso.RegistroActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".acceso.RecuperarActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".acceso.HuellaActivity" />
+
+        <!-- COMPRADOR (tema azul) -->
+        <activity android:name=".comprador.CompradorActivity" />
+        <activity android:name=".comprador.DetalleApiActivity" />
+        <activity android:name=".comprador.PagoActivity" />
+
+        <!-- VENDEDOR (tema verde) -->
+        <activity android:name=".vendedor.VendedorActivity" android:theme="@style/Theme.ConectAPI.Vendedor" />
+        <activity android:name=".vendedor.FormApiActivity" android:theme="@style/Theme.ConectAPI.Vendedor" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".vendedor.PlanesActivity" android:theme="@style/Theme.ConectAPI.Vendedor" android:windowSoftInputMode="adjustResize" />
+
+        <!-- ADMINISTRADOR (tema grafito) -->
+        <activity android:name=".admin.AdminActivity" android:theme="@style/Theme.ConectAPI.Admin" />
+        <activity android:name=".admin.FormUsuarioActivity" android:theme="@style/Theme.ConectAPI.Admin" android:windowSoftInputMode="adjustResize" />
+
+        <!-- COMUN: el tema se pone por codigo segun el rol -->
+        <activity android:name=".comun.EditarPerfilActivity" android:windowSoftInputMode="adjustResize" />
+    </application>
+</manifest>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G2 · Iniciar sesion. ScrollView para que no se corte en pantallas pequenas -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fillViewport="true"
+    android:importantForAutofill="noExcludeDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_grande">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/margen"
+            android:background="@drawable/bg_logo_login"
+            android:contentDescription="@string/logo_de_conectapi"
+            android:padding="16dp"
+            android:src="@drawable/ic_llave_blanca" />
+
+        <TextView
+            style="@style/Texto.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/hola_de_nuevo" />
+
+        <TextView
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ingresa_a_tu_cuenta" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grande"
+            android:hint="@string/correo"
+            app:startIconDrawable="@drawable/ic_correo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contrasena"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_candado">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnOlvide"
+            style="@style/Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/olvidaste_tu_contrasena" />
+
+        <!-- Como todavia no hay servidor, aqui se elige con que rol entrar para ver sus pantallas -->
+        <TextView
+            style="@style/Texto.Etiqueta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/entrar_como_demostracion" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupoRol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:checkedButton="@id/btnRolComprador"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/btnRolComprador"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0"
+                android:text="@string/comprador"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnRolVendedor"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0"
+                android:text="@string/vendedor"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnRolAdmin"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0"
+                android:text="@string/admin"
+                android:textSize="12sp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <Button
+            android:id="@+id/btnEntrar"
+            style="@style/Boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/entrar" />
+
+        <Button
+            android:id="@+id/btnHuella"
+            style="@style/Boton.Borde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno"
+            android:text="@string/entrar_con_huella"
+            app:icon="@drawable/ic_huella"
+            app:iconGravity="textStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/borde" />
+
+            <TextView
+                style="@style/Texto.Suave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margen_medio"
+                android:text="@string/o_continua_con" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/borde" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_medio"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGoogle"
+                style="@style/Boton.Borde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="@string/google"
+                android:textColor="@color/texto" />
+
+            <Button
+                android:id="@+id/btnGithub"
+                style="@style/Boton.Borde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="@string/github"
+                android:textColor="@color/texto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Texto.Suave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_tienes_cuenta" />
+
+            <Button
+                android:id="@+id/btnRegistro"
+                style="@style/Boton.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registrate" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

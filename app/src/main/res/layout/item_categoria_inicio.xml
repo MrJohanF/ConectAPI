@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Categoria en la fila horizontal del inicio -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="84dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_circulo_claro"
+        android:importantForAccessibility="no"
+        android:padding="16dp"
+        android:src="@drawable/ic_categoria"
+        app:tint="?attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        style="@style/Texto.Suave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp" />
+</LinearLayout>

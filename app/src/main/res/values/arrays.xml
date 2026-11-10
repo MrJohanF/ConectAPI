@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Opciones de las listas desplegables -->
+    <string-array name="roles">
+        <item>Comprador</item>
+        <item>Vendedor</item>
+        <item>Administrador</item>
+    </string-array>
+    <string-array name="estados_usuario">
+        <item>Activo</item>
+        <item>Pendiente</item>
+        <item>Bloqueado</item>
+    </string-array>
+    <string-array name="categorias_api">
+        <item>Pagos</item>
+        <item>Mapas</item>
+        <item>IA</item>
+        <item>Mensajería</item>
+        <item>Facturación</item>
+    </string-array>
+</resources>

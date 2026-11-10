@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margen">16dp</dimen>
+    <dimen name="margen_medio">12dp</dimen>
+    <dimen name="margen_pequeno">8dp</dimen>
+    <dimen name="margen_grande">24dp</dimen>
+    <dimen name="radio_tarjeta">18dp</dimen>
+    <dimen name="radio_boton">14dp</dimen>
+    <dimen name="alto_boton">54dp</dimen>
+    <dimen name="logo_api">46dp</dimen>
+    <dimen name="avatar_grande">88dp</dimen>
+</resources>

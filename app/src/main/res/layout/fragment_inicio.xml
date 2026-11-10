@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C1 · Pantalla de inicio del comprador -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margen">
+
+        <TextView
+            android:id="@+id/txtSaludo"
+            style="@style/Texto.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/que_api_necesitas_hoy" />
+
+        <!-- Buscador: al tocarlo lleva al catalogo -->
+        <TextView
+            android:id="@+id/btnBuscar"
+            style="@style/OpcionPerfil"
+            android:layout_marginTop="@dimen/margen_medio"
+            android:text="@string/buscar_apis"
+            android:textColor="@color/texto_suave"
+            app:drawableStartCompat="@drawable/ic_buscar"
+            app:drawableTint="@color/texto_suave" />
+
+        <!-- Banner de novedades -->
+        <LinearLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:background="@drawable/bg_banner"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_logo_app"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:text="@string/nuevo"
+                android:textColor="@color/blanco"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_pequeno"
+                android:text="@string/textoia"
+                android:textColor="@color/blanco"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resume_textos_en_espanol_1"
+                android:textColor="@color/blanco_suave"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grande"
+            android:text="@string/categorias" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_medio"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Texto.Subtitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/destacadas" />
+
+            <Button
+                android:id="@+id/btnVerTodo"
+                style="@style/Boton.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_todo" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaDestacadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

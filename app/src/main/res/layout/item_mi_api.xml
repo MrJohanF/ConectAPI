@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- API del vendedor con botones de editar y eliminar -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Tarjeta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margen_pequeno">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:id="@+id/txtLogo"
+            style="@style/LogoApi" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_medio"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNombre"
+                style="@style/Texto.Negrita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtDetalle"
+                style="@style/Texto.Suave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtEstado"
+                style="@style/EtiquetaEstado"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnEditar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/editar"
+            android:src="@drawable/ic_editar"
+            app:tint="?attr/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/btnBorrar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/eliminar"
+            android:src="@drawable/ic_borrar"
+            app:tint="@color/rojo" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

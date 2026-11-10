@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Perfil. Lo usan los tres roles; algunos textos cambian por codigo segun el rol -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno">
+
+            <TextView
+                android:id="@+id/txtIniciales"
+                android:layout_width="@dimen/avatar_grande"
+                android:layout_height="@dimen/avatar_grande"
+                android:background="@drawable/bg_circulo"
+                android:gravity="center"
+                android:textColor="@color/blanco"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnFoto"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_circulo"
+                android:backgroundTint="@color/grafito"
+                android:contentDescription="@string/cambiar_foto"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_camara"
+                app:tint="@color/blanco" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtNombre"
+            style="@style/Texto.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_medio"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtCorreo"
+            style="@style/Texto.Suave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margen_pequeno" />
+
+        <TextView
+            android:id="@+id/opEditar"
+            style="@style/OpcionPerfil"
+            android:text="@string/editar_mis_datos"
+            app:drawableEndCompat="@drawable/ic_flecha"
+            app:drawableStartCompat="@drawable/ic_editar"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/opCiudad"
+            style="@style/OpcionPerfil"
+            app:drawableStartCompat="@drawable/ic_ubicacion"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/opExtra"
+            style="@style/OpcionPerfil"
+            app:drawableEndCompat="@drawable/ic_flecha"
+            app:drawableStartCompat="@drawable/ic_recibo"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <!-- Interruptores -->
+        <LinearLayout
+            style="@style/OpcionPerfil"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="14dp"
+                android:gravity="center_vertical"
+                android:text="@string/entrar_con_huella"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_huella"
+                app:drawableTint="?attr/colorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swHuella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/OpcionPerfil"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="14dp"
+                android:gravity="center_vertical"
+                android:text="@string/notificaciones"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_campana"
+                app:drawableTint="?attr/colorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/opClave"
+            style="@style/OpcionPerfil"
+            android:text="@string/cambiar_contrasena"
+            app:drawableEndCompat="@drawable/ic_flecha"
+            app:drawableStartCompat="@drawable/ic_candado"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/opDatos"
+            style="@style/OpcionPerfil"
+            android:text="@string/mis_datos_personales"
+            app:drawableEndCompat="@drawable/ic_flecha"
+            app:drawableStartCompat="@drawable/ic_escudo"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnSalir"
+            style="@style/Boton.Borde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/cerrar_sesion"
+            app:icon="@drawable/ic_salir"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            style="@style/Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eliminar_mi_cuenta"
+            android:textColor="@color/rojo" />
+    </LinearLayout>
+</ScrollView>

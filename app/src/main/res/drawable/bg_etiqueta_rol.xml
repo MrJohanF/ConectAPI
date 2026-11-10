@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Etiqueta del rol en la barra superior: toma los colores del tema -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="?attr/colorPrimaryContainer" />
+    <corners android:radius="20dp" />
+</shape>

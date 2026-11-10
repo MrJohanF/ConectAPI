@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- V1 · Panel del vendedor -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_medio">
+
+        <TextView
+            android:id="@+id/txtSaludo"
+            style="@style/Texto.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_pequeno"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/metrica1"
+                layout="@layout/tarjeta_metrica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/metrica2"
+                layout="@layout/tarjeta_metrica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/metrica3"
+                layout="@layout/tarjeta_metrica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/metrica4"
+                layout="@layout/tarjeta_metrica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            style="@style/Texto.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/ventas_ultimos_6_meses" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <!-- Las barras se agregan por codigo con item_barra.xml -->
+            <LinearLayout
+                android:id="@+id/grafica"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/margen" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Texto.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/margen"
+            android:text="@string/avisos" />
+
+        <TextView
+            style="@style/OpcionPerfil"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:text="@string/tu_api_pagofacil_v2_fue"
+            app:drawableStartCompat="@drawable/ic_check"
+            app:drawableTint="@color/verde" />
+
+        <TextView
+            style="@style/OpcionPerfil"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:text="@string/sms_rapido_fue_rechazada_falta"
+            app:drawableStartCompat="@drawable/ic_campana"
+            app:drawableTint="@color/naranja" />
+    </LinearLayout>
+</ScrollView>

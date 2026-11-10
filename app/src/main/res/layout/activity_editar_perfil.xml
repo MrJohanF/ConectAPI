@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Editar perfil (CRUD de perfil: actualizar) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/barra"
+        style="@style/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_atras"
+        app:title="@string/editar_mis_datos" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_grande">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre"
+                app:startIconDrawable="@drawable/ic_persona">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/correo"
+                app:helperText="@string/para_cambiarlo_te_enviamos_un"
+                app:startIconDrawable="@drawable/ic_correo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/telefono">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ciudad"
+                app:endIconDrawable="@drawable/ic_ubicacion"
+                app:endIconMode="custom"
+                app:startIconDrawable="@drawable/ic_ubicacion">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                style="@style/Boton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_grande"
+                android:text="@string/guardar_cambios" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
