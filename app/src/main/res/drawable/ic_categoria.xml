@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Icono de linea delgada con puntas redondeadas -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
@@ -6,6 +7,15 @@
     android:viewportHeight="24"
     android:tint="?attr/colorControlNormal">
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M17.63,5.84C17.27,5.33 16.67,5 16,5L5,5.01C3.9,5.01 3,5.9 3,7v10c0,1.1 0.9,1.99 2,1.99L16,19c0.67,0 1.27,-0.33 1.63,-0.84L22,12l-4.37,-6.16z" />
+        android:pathData="M3,4.5v6.3a1.5,1.5 0 0,0 0.44,1.06l8.2,8.2a1.5,1.5 0 0,0 2.12,0l6.3,-6.3a1.5,1.5 0 0,0 0,-2.12l-8.2,-8.2A1.5,1.5 0 0,0 10.8,3H4.5A1.5,1.5 0 0,0 3,4.5z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M6.6,7.5a0.9,0.9 0 1,0 1.8,0a0.9,0.9 0 1,0 -1.8,0"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
 </vector>
